@@ -81,3 +81,9 @@ function love.draw()
     local paddleX, paddleY = paddle:getPosition()
     love.graphics.rectangle("fill", paddleX - PADDLE_WIDTH / 2, paddleY - PADDLE_HEIGHT / 2, PADDLE_WIDTH, PADDLE_HEIGHT)
 end
+
+function love.keypressed(key)
+    if key == "escape" then
+        love.event.quit()
+    end
+ end
